@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bankend</title>
+</head>
+<body>
+    <h1>Backend</h1>
+    <form id="investors">
+        <input id="image" placeholder="Enter image url">
+        <input id="Name" placeholder="Enter name">
+        <input id="position" placeholder="Position">
+        <input type="text" placeholder="Company_logo Url" id="companylogo">
+        <input type="submit">
+    </form>
+</body>
+</html>
+<script>
+   
+
+
+   var form=document.querySelector("#investors")
+   form.addEventListener("submit",func1);
+   var InvestorArr=[];
+
+   function func1(){
+    // event.preventDefault()
+    var obj={
+     Image:investors.image.value,
+     name:investors.Name.value,
+     Position:investors.position.value,
+     Logo:investors.companylogo.value,
+    }
+    InvestorArr.push(obj)
+
+    localStorage.setItem("investordata",JSON.stringify(InvestorArr))
+    }
+
+
+
+
+</script>
