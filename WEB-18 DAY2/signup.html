@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Sign Up</title>
+    <style>
+        body{
+            background-color: bisque;
+            
+        }
+    #container{
+      width:40%;
+      height: 500px;
+      margin: Auto;
+      background-color: rgb(245, 245, 245);
+      box-shadow: inset;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      /* display: flex; */
+      /* justify-content: center; */
+      /* align-items: center; */
+
+    }
+    .h4{
+        margin-top: 10px;
+        margin-bottom:20px;
+    }
+    #name{
+        border: 1px solid red;
+        width: 70%;
+        height: 40px;
+        border-radius: 10px;
+    }
+    #mail{
+        border: 1px solid red;
+        width: 70%;
+        height: 40px;
+        border-radius: 10px;
+    }
+    #mobile{
+        border: 1px solid red;
+        width: 70%;
+        height: 40px;
+        border-radius: 10px;
+    }
+    #password{
+        border: 1px solid red;
+        width: 70%;
+        height: 35px;
+        border-radius: 10px;
+    }
+    button{
+        border: 1px solid red;
+        width: 40%;
+        height: 30px;
+        border-radius: 10px;
+        margin-top: 40px;
+        
+    }
+    button:hover{
+        background-color: rgb(131, 56, 201);
+        color: white;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2 class="h4">Name</h2>
+        <input id="name" type="text" placeholder="Enter you name">
+         <h2 class="h4">Email</h2>
+        <input id="mail" type="text" placeholder="Enter you email">
+        <h2 class="h4">Mobile no.</h2>
+        <input id="mobile" type="number" placeholder="Enter mobile no." >
+        <h2>Password</h2>
+        <input id="password" type="text" placeholder="Set your Pasword">
+        <button <a href="signin.html">signup</button></button>
+    </div>
+</body>
+</html>
+<script>
+document.querySelector("button").addEventListener("click",signupfun)
+var signupdata=[]
+function signupfun(){
+    var dataobj={
+        Name:document.querySelector("#name").value,
+        Email:document.querySelector("#mail").value,
+        Mobile:document.querySelector("#mobile").value
+    }
+    signupdata.push(dataobj);
+    localStorage.setItem("logindetail",JSON.stringify(signupdata))
+  
+   
+    
+    
+}
+
+
+
+</script>
